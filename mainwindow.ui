@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Rewind</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/PC/Downloads/Rewind.png</normaloff>C:/Users/PC/Downloads/Rewind.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>700</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(172, 0, 0);
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+font: 75 11pt &quot;Consolas&quot;;
+font: 75 11pt &quot;Consolas&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QPushButton" name="ExitMain">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>440</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:black;
+background-color: rgb(207, 255, 231);
+border-top-color: rgb(120, 138, 255);
+border-color: rgb(111, 149, 255);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;</string>
+      </property>
+      <property name="text">
+       <string>EXIT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(172, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Rewind Backup and Restore Utility</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="backupMain">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>120</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:black;
+background-color: rgb(229, 255, 217);
+border-right-color: rgb(85, 0, 0);
+border-top-color: rgb(85, 0, 0);
+border-left-color: rgb(85, 0, 0);
+border-bottom-color: rgb(85, 0, 0);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+selection-color: rgb(232, 205, 255);</string>
+      </property>
+      <property name="text">
+       <string>BACKUP</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RestoreMain">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>120</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 255, 231);
+border-top-color: rgb(120, 138, 255);
+border-color: rgb(111, 149, 255);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>RESTORE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Library">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>120</y>
+        <width>75</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:black;
+background-color: rgb(207, 255, 231);
+border-top-color: rgb(120, 138, 255);
+border-color: rgb(111, 149, 255);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;</string>
+      </property>
+      <property name="text">
+       <string>LBRARY</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>200</y>
+        <width>211</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>System Backup and Restore</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="RadioBackup">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>260</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Backup</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="RadioRestore">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>320</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Restore</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="SystemProcess">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>350</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 255, 231);
+border-top-color: rgb(120, 138, 255);
+border-color: rgb(111, 149, 255);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>Process</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Apps">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>290</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Apps</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SystemApps">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>290</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>System Apps</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="extSdcard">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>290</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>extSdcard</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="All">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>290</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>All</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>70</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PHOTOS AND VIDEOS</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="System">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>290</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>System</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>450</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/new/prefix1/Help.PNG);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>470</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>HELP</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_13">
+     <widget class="QCheckBox" name="PhotosBackup">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>170</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(172, 0, 0);
+font: 75 11pt &quot;Consolas&quot;;
+font: 75 11pt &quot;Consolas&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Photos</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="VideoBackup">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>200</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(172, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Videos</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BackupButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>180</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:black;
+background-color: rgb(207, 255, 231);
+font: 12pt &quot;Lucida Handwriting&quot;;
+border-right-color: rgb(85, 0, 0);
+border-top-color: rgb(85, 0, 0);
+border-left-color: rgb(85, 0, 0);
+border-bottom-color: rgb(85, 0, 0);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+selection-color: rgb(232, 205, 255);</string>
+      </property>
+      <property name="text">
+       <string>GO</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="backTobackup">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>380</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:black;
+background-image:url(:/new/prefix1/Capt.PNG);
+border-right-color: rgb(85, 0, 0);
+border-top-color: rgb(85, 0, 0);
+border-left-color: rgb(85, 0, 0);
+border-bottom-color: rgb(85, 0, 0);
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+selection-color: rgb(232, 205, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>60</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(172, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Backup Options</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Xender">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>120</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>From Xender</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Telegram">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>120</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>From Telegram</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="CameraRoll">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>120</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>From Camera</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="BackupAllVideos">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>330</y>
+        <width>161</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Backup all videos</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AllBackup">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>310</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-right-color: rgb(85, 0, 0);
+border-top-color: rgb(85, 0, 0);
+border-left-color: rgb(85, 0, 0);
+border-bottom-color: rgb(85, 0, 0);
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+selection-color: rgb(232, 205, 255);
+
+color:black;
+background-color: rgb(229, 255, 221);</string>
+      </property>
+      <property name="text">
+       <string>Process</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>250</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Additional option</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="BackupAllPhoto">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>300</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Backup all Photos</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_14">
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>80</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(172, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Restore Options</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PhotosRestore">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>190</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(172, 0, 0);
+font: 75 11pt &quot;Consolas&quot;;
+font: 75 11pt &quot;Consolas&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Photos</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="VideoRestore">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>220</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(172, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Videos</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RestoreButton">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>200</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 255, 231);
+font: 12pt &quot;Lucida Handwriting&quot;;
+border-right-color: rgb(85, 0, 0);
+border-top-color: rgb(85, 0, 0);
+border-left-color: rgb(85, 0, 0);
+border-bottom-color: rgb(85, 0, 0);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+selection-color: rgb(232, 205, 255);
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>GO</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BackToRestore">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>400</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image:url(:/new/prefix1/Capt.PNG);
+border-right-color: rgb(85, 0, 0);
+border-top-color: rgb(85, 0, 0);
+border-left-color: rgb(85, 0, 0);
+border-bottom-color: rgb(85, 0, 0);
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+selection-color: rgb(232, 205, 255);
+
+color:black;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Xender_2">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>140</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>To Xender</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Telegram_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>140</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>To Telegram</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="CameraRoll2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>140</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>To Device</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>280</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Additional option</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RestoreAllPhoto">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>310</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Restore all Photos</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RestoreAllVideos">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>340</y>
+        <width>161</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Restore all videos</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AllRestore">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>320</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-right-color: rgb(85, 0, 0);
+border-top-color: rgb(85, 0, 0);
+border-left-color: rgb(85, 0, 0);
+border-bottom-color: rgb(85, 0, 0);
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+selection-color: rgb(232, 205, 255);
+
+color:black;
+background-color: rgb(229, 255, 221);</string>
+      </property>
+      <property name="text">
+       <string>Process</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>370</y>
+        <width>501</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>You can find restored files in your phone in Rewind Directory.</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>30</y>
+        <width>101</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 11pt &quot;Rockwell&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Rewind Help</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>90</y>
+        <width>561</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This Software is designed to backup and restore files from Android devices.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Created By :-&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1, Nahom Demeke ---- NSR/7251/11&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2, Tibebe Solomon ---- NSR/9617/11&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3, Selman Zeynu ---- NSR/8538/11&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Before starting to backup or restore enable Developer Options,&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1, Go to settings on your phone --&amp;gt; scroll down to &amp;quot;About Devices&amp;quot; and click it --&amp;gt; go to &amp;quot;Software info&amp;quot; and click it --&amp;gt; tap on &amp;quot;Build Number&amp;quot; 10 times.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2, Go back into settings and navigate to the bottom--&amp;gt; goto Developer options --&amp;gt; enable &amp;quot;USB Debugging&amp;quot;--&amp;gt; setup &amp;quot;Desktop backup password&amp;quot;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3, Connect your phone to the pc.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="backTobackup_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>420</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:black;
+background-image:url(:/new/prefix1/Capt.PNG);
+border-right-color: rgb(85, 0, 0);
+border-top-color: rgb(85, 0, 0);
+border-left-color: rgb(85, 0, 0);
+border-bottom-color: rgb(85, 0, 0);
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+selection-color: rgb(232, 205, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
